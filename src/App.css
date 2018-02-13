@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 .App {
-  text-align: center;
+	text-align: center;
+	font-family: Pacifico;
 }
 
 .App-logo {
@@ -20,6 +23,11 @@
 
 .App-intro {
   font-size: large;
+}
+
+mark {
+	color: #ff0080;
+	background: transparent;
 }
 
 @keyframes App-logo-spin {

@@ -1,0 +1,20 @@
+.ProfileEdit {
+	display: flex;
+	justify-content: center;
+	align-items: top;
+}
+
+.input {
+	height: 28px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.button {
+	text-decoration: none;
+	border-radius: 2px;
+	padding: 0 5px;
+	color: white;
+	margin-left: 5px;
+	background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+}

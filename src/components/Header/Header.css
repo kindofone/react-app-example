@@ -1,0 +1,14 @@
+header {
+	height: 50px;
+	background: gray;
+	padding: 10px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+}
+
+.app-title {
+
+}

@@ -48,6 +48,7 @@ class App extends Component {
 				<Route exact path="/" component={Home} />
 				<Route path="/profile" component={Profile} />
 				<Route path="/about" component={About} />
+				{this.state.forecast}
       </div>
     );
   }

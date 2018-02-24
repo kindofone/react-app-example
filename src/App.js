@@ -12,8 +12,29 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			name: "Yogev"
+			name: "Yogev",
+			forecast: []
 		};
+	}
+
+	componentDidMount() {
+		fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/2487956/')
+		.then(results => {
+			return results.json();
+		}).then(data => {
+			console.log(data);
+			let forecast = data.consolidated_weather.map((day) => {
+				let imageUrl = `https://www.metaweather.com/static/img/weather/png/64/${day.weather_state_abbr}.png`;
+				return (
+					<div className="day">
+						<img src={imageUrl} />
+					</div>
+				);
+			});
+			this.setState({
+				forecast: forecast
+			});
+		});
 	}
 
 	changeYogevToZiv() {
@@ -27,6 +48,7 @@ class App extends Component {
 				<Route exact path="/" component={Home} />
 				<Route path="/profile" component={Profile} />
 				<Route path="/about" component={About} />
+				{this.state.forecast}
       </div>
     );
   }
